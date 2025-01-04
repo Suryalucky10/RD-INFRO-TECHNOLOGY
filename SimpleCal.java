@@ -5,13 +5,13 @@ import java.awt.event.ActionListener;
 
 public class SimpleCal {
     public static void main(String[] args) {
-        // Create frame
+
         JFrame frame = new JFrame("Simple Calculator");
         frame.setSize(500, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new GridLayout(5, 2));
 
-        // Create components
+        
         JLabel label1 = new JLabel("Enter first number:");
         JTextField num1Field = new JTextField();
         JLabel label2 = new JLabel("Enter second number:");
@@ -25,7 +25,7 @@ public class SimpleCal {
         JButton multiplyButton = new JButton("Multiply");
         JButton divideButton = new JButton("Divide");
 
-        // Add components to frame
+    
         frame.add(label1);
         frame.add(num1Field);
         frame.add(label2);
@@ -37,7 +37,7 @@ public class SimpleCal {
         frame.add(resultLabel);
         frame.add(resultField);
 
-        // Add action listeners for buttons
+
         ActionListener calculate = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -72,7 +72,7 @@ public class SimpleCal {
         multiplyButton.addActionListener(calculate);
         divideButton.addActionListener(calculate);
 
-        // Set frame visible
+        
         frame.setVisible(true);
     }
 }
